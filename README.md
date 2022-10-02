@@ -34,6 +34,16 @@ Run Project
 npm run dev;
 ```
 
+
+#### Features
+
+* Retrieve Playlists
+* Retrieve List of Songs per Playlist
+* Player:
+  * Play Song
+  * Pause Song
+  * Adjust Volume
+
 ### Spotify Quirks
 
 In order to use the Spotify API you must have an ACTIVE_DEVICE.
