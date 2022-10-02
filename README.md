@@ -1,5 +1,7 @@
 ### Spotify 2.0 (side project)
 
+![](https://github.com/albertorsesc/spotify-2.0/blob/master/public/spotify-demo.png)
+
 ## Installation
 
 ### Requirements
@@ -16,7 +18,7 @@ Spotify API keys.
 Clone Repo
 
 ```shell
-git clone ;
+git clone https://github.com/albertorsesc/spotify-2.0.git;
 cd spotify-2.0;
 ```
 
