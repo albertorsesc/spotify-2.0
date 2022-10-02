@@ -1,13 +1,15 @@
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
+import { signOut } from "next-auth/react";
+
 import { shuffle } from 'lodash';
 
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { playlistIdState, playlistState } from '../atoms/playlistAtom';
+import { playlistIdStateAtom, playlistStateAtom } from '../atoms/playlist.atom';
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import useSpotify from "../hooks/useSpotify";
+import useSpotify from "../hooks/useSpotify.hook";
 
 import Songs from '../components/Songs';
 
@@ -25,8 +27,8 @@ const Center = () => {
   const spotifyApi = useSpotify();
   const { data: session } = useSession();
   const [color, setColor] = useState(null);
-  const playlistId = useRecoilValue(playlistIdState);
-  const [playlist, setPlaylist] = useRecoilState(playlistState);
+  const playlistId = useRecoilValue(playlistIdStateAtom);
+  const [playlist, setPlaylist] = useRecoilState(playlistStateAtom);
 
   useEffect(() => {
     setColor(shuffle(gradientColors).pop());
@@ -43,7 +45,7 @@ const Center = () => {
 
       <header className="absolute top-5 right-8">
 
-        <div className="flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2">
+        <div onClick={signOut} className="flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2">
           <img src={session?.user.image ?? 'https://avatars.githubusercontent.com/u/22654040?s=400&u=b4c45a0a60117314537fa0ef7aec04e2038e07da&v=4'}
             className='rounded-full w-10 h-10 object-cover'
             alt="" />
