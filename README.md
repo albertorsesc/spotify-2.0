@@ -1,27 +1,43 @@
-# Next.js + Tailwind CSS Example
+### Spotify 2.0 (side project)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Installation
 
-## Deploy your own
+### Requirements
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Spotify API keys.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+* Visit: `https://developer.spotify.com/dashboard/applications`
+* Login
+* Create an App
+* Retrieve: `Client ID` and `Client Secret` and assign to `.env` file
 
-## How to use
+### Install
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Clone Repo
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+```shell
+git clone ;
+cd spotify-2.0;
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+Install NPM dependencies
+
+```shell
+npm install;
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+Run Project
+
+```shell
+npm run dev;
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Spotify Quirks
+
+In order to use the Spotify API you must have an ACTIVE_DEVICE.
+
+* Open Web/Desktop/Mobile player
+* Hit play then pause to "wake" the Active state.
+
+>Note: Previous Song and Skip Song are implemented although not usable due to some issues with the Spotify API (IMO)
+
