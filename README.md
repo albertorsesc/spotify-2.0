@@ -20,6 +20,7 @@ Clone Repo
 ```shell
 git clone https://github.com/albertorsesc/spotify-2.0.git;
 cd spotify-2.0;
+cp .env.example .env;
 ```
 
 Install NPM dependencies
